@@ -3,7 +3,9 @@ name: trufiu
 services:
   postgres:
     container_name: postgres
-    image: postgres:15-alpine
+    build:
+      context: ./postgres
+      dockerfile: Dockerfile
     environment:
       - POSTGRES_USER=${MAIN_DB_USER}
       - POSTGRES_PASSWORD=${MAIN_DB_PASSWORD}

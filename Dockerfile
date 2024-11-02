@@ -1,2 +1,1 @@
-FROM scratch
-WORKDIR /
+FROM postgres:15-alpine 
